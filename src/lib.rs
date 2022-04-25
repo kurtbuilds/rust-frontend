@@ -1,6 +1,8 @@
 mod window;
 pub mod document;
 pub mod console;
+mod observable;
+
 pub(crate) use crate::console::console_log;
 
 use wasm_bindgen::prelude::*;
@@ -25,6 +27,7 @@ struct Window {
 impl Window {
 
 }
+
 #[wasm_bindgen]
 pub fn greet(name: &str) {
     let window = window();
